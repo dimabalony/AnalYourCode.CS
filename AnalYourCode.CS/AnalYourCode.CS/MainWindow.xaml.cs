@@ -32,7 +32,24 @@ namespace AnalYourCode.CS
 
         private void ButtonChangeWS_Click(object sender, RoutedEventArgs e)
         {
-
+            string mystr = ButtonChangeWS.Content.ToString();
+            if (ButtonChangeWS.Content.ToString() == "")
+            {
+                this.WindowState = WindowState.Maximized;
+                ButtonChangeWS.Content = "";
+                topPanel.Height += 6;
+                Rect_PushWhenMaximized_1.Width = 6;
+                Rect_PushWhenMaximized_2.Height = 6;
+                //ButtonSettings.Margin = new Thickness(0, 0, 0, 4);
+            }
+            else if (ButtonChangeWS.Content.ToString() == "")
+            {
+                this.WindowState = WindowState.Normal;
+                ButtonChangeWS.Content = "";
+                topPanel.Height -= 6;
+                Rect_PushWhenMaximized_1.Width = 0;
+                Rect_PushWhenMaximized_2.Height = 0;
+            }
         }
 
         private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
@@ -56,6 +73,41 @@ namespace AnalYourCode.CS
         }
 
         private void ButtonAnalyze_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SecurityWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void panelChangeLanguage_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void TopPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (this.WindowState != WindowState.Maximized) { this.DragMove(); }
+        }
+
+        private void sidePanel_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+
+        }
+
+        private void ButtonSwitchView_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
         }
